@@ -30,7 +30,7 @@ jobs:
       with:
         machine: api.mapbox.com
         username: mapbox
-        password: sk.eyJ1IjoiYW50b242dGFrIiwiYSI6ImNrcjFrOGR0YzBnb3gycnFtbTlxcGw5eTUifQ.yN_tFHdE-t8INdf8mmjFQA
+        password: ${{ secrets.MAPBOX_SECRET_TOKEN }}
     - name: Cocoapods install
       run: (cd iosApp && pod install)
     - name: Run a one-line script
