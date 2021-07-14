@@ -19,6 +19,8 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: macOS-latest
+    env:
+      MAPBOX_SECRET_TOKEN: ${{ secrets.MAPBOX_SECRET_TOKEN }}
     steps:
     - uses: actions/checkout@v1
     - name: Set up JDK 11
